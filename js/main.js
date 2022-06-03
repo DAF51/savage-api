@@ -20,6 +20,4 @@ async function fetchFight(){
     console.log(li)
     list.appendChild(li)
   })
-
-
 }

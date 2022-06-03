@@ -3,6 +3,8 @@ let cors = require('cors')
 let app = express()
 const PORT = 8000
 
+app.use(cors())
+
 const savageFights ={
   "p1s": {
     "name": "Pandaemonium First Circle",
@@ -27,11 +29,12 @@ const savageFights ={
   },
 
   "unknown":{
-    "name": "This fight either doesn't exist, has been misspelled or has not yet been added to this API"
+    "name": "This fight either doesn't exist, has been misspelled or has not yet been added to this API",
+    "strats": [{"none": "Can't have a strat for something that doesn't exist"}]
   }
 }
 
-app.use(cors())
+
 
 app.get("/", (req, res) => {
   res.sendFile(__dirname +"/index.html")
