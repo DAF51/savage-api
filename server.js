@@ -33,7 +33,7 @@ const savageFights ={
 
 app.use(cors())
 
-app.get("/", (req, res) => {
+app.get("/app", (req, res) => {
   res.sendFile(__dirname +"index.html")
 })
 
