@@ -31,6 +31,7 @@ const savageFights ={
   }
 }
 
+app.use(express.static())
 app.use(cors())
 
 app.get("/", (req, res) => {
