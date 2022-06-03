@@ -3,6 +3,7 @@ let cors = require('cors')
 let app = express()
 const PORT = 8000
 
+app.use(express.static(__dirname))
 app.use(cors())
 
 const savageFights ={
